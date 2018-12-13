@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/resize.css">
+	<link rel="stylesheet" href="../css/normal.css">
+	<title>详情</title>
+	<script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<a name="top" class="pos-r display-b" style="top: -10000px;"></a>
+	<a name="bottom" class="pos-r display-b" style="bottom: -10000px;"></a>
+	<!-- 顶部 start -->
+	<div class="w100-per bg-theme" style="height: 35px;line-height: 35px;box-shadow: 0 6px 7px -5px #ddd;">
+		<div class="margin-auto" style="width: 1213px;">
+			<div class="fr pos-r">
+				<input class="search bg-f border-none radius-10 box pos-r" type="text" style="width: 148px;height:19px;padding:0 20px 0 8px;top:-2px;">
+				<i class="iconfont icon-search font12"></i>
+			</div>
+			<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&amp;id=5&color=%23FFFFFF" width="260" height="30" frameborder="0"
+			 marginwidth="0" marginheight="0" scrolling="no" class="fr pos-r" style="top:5px;"></iframe>
+		</div>
+	</div>
+	<!-- 顶部 end -->
+	<!-- 导航菜单 start -->
+	<div style="height: 137px;box-shadow: 0 6px 7px -5px #ddd;">
+		<div class="margin-auto" style="width: 1200px;height: 137px;line-height: 137px;">
+			<img src="../images/logo.jpg" alt="" class="pos-r" style="top:-36px;left:33px;">
+			<ul class="menu">
+				<li class="fl">
+					<a href="#">首页</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善资讯</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">慈善新闻</a>
+						</li>
+						<li>
+							<a href="#">工作动态</a>
+						</li>
+						<li>
+							<a href="#">区县动态</a>
+						</li>
+						<li>
+							<a href="#">信息公示</a>
+						</li>
+						<li>
+							<a href="#">政策法规</a>
+						</li>
+						<li>
+							<a href="#">规章制度</a>
+						</li>
+						<li>
+							<a href="#">视频新闻</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善捐赠</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">冠名基金</a>
+						</li>
+						<li>
+							<a href="#">慈善项目</a>
+						</li>
+						<li>
+							<a href="#">专项基金</a>
+						</li>
+						<li>
+							<a href="#">物资捐赠</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善救助</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">扶贫济困</a>
+						</li>
+						<li>
+							<a href="#">社会福利</a>
+						</li>
+						<li>
+							<a href="#">赈灾救助</a>
+						</li>
+						<li>
+							<a href="#">公益捐赠</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">志愿服务</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">团队动态</a>
+						</li>
+						<li>
+							<a href="#">义工风采</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善文化</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">政策法规</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">关于我们</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">总会简介</a>
+						</li>
+						<li>
+							<a href="#">组织架构</a>
+						</li>
+						<li>
+							<a href="#" style="padding: 9px 5px;">理事会成员</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 导航菜单 end -->
+	<!-- 内容 start -->
+	<div class="margin-auto" style="width: 1200px;">
+		<div style="height: 79px;line-height: 79px;color: #444444;">
+			<span class="display-ib vertical-a-t font16">当前位置：</span>
+			<ul class="display-ib vertical-a-t">
+				<li class="fl">
+					<a href="#">首页</a>
+				</li>
+				<li class="fl font18" style="margin: 0 4px;">></li>
+				<li class="fl">
+					<a href="#">慈善资讯</a>
+				</li>
+			</ul>
+		</div>
+		<div class="line" style="height:30px;border-top: 1px solid #e2e2e2;"></div>
+		<div class="pos-r" style="top:-15px;">
+			<div>
+				<div class="text-c font26 color-3 font-b">慈善刘维隆</div>
+				<div class="text-c font14 color-6 pos-r" style="margin-top: 20px;">
+					<span class="tag display-ib" style="width: 23px;height:20px;"></span>
+					<span class="display-ib vertical-a-t text-l" style="width:50px;height:30px;">标签：</span>
+					<div class="display-ib vertical-a-t">
+						<span style="margin-right:18px;">善良</span>
+						<span style="margin-right:18px;">传播</span>
+						<span style="margin-right:18px;">和谐</span>
+					</div>
+					<div class="see pos-a top0" style="right:160px;height:30px;padding-left: 30px;">
+						<span class="fl">浏览：</span>
+						<span class="fl">106</span>
+						<span class="fl">次</span>
+					</div>
+					<div class="bdsharebuttonbox pos-a right0" style="top:-4px;width: 92px;height: 30px;">
+						<a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+						<a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+						<a href="#" class="bds_douban" data-cmd="douban" title="分享到新浪微博"></a>
+						<a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+					</div>
+				</div>
+				<div class="text-c" style="width: 640px;height: 400px;line-height:400px;margin:42px auto 50px;">
+					<img src="../images/temp6.png" alt="">
+				</div>
+				<div class="font16" style="color: #444444;">
+					<p style="text-indent: 1cm;line-height:30px;">中华民族是一个热情仁爱，乐善好施的民族，关于慈善的概念，古已有之。在中国传统文化典籍中，“慈”是“爱”的意思。孔颖达疏《左传》有云：“慈者爱，出于心，恩被于业”；又曰：“慈为爱之深也”。许慎的《说文解字》中也有解释道：“慈，爱也”。它尤指长辈对晚辈的爱抚，即所谓“上爱下曰慈”。《国语·吴》中“老其老，慈其幼，长其孤”的“慈”即为此意。“善”的本义是“吉祥，美好”，即《说文解字》中所解释的"善，吉"，后引申为和善、亲善、友好，如《管子．心术下》中所说的：“善气”二字合用，则是“仁善”，“善良”，“富于同情心”的意思，如《北史．崔光传》中所讲：“光宽和慈善”。</p>
+				</div>
+			</div>
+			<div class="box text-r" style="height:140px;border-top: 1px solid #dcdcdc;margin-top:50px;padding:50px 90px 0 0;">
+				<span class="display-ib font14 color-9 pos-r" style="margin:13px 47px 0 0;">已到首篇</span>
+				<div class="on box bg-f font12 display-ib vertical-a-t color-9 border-9" style="width:122px;padding:12px 33px 15px 51px;">上一篇</div>
+				<div class="below box bg-f font12 display-ib vertical-a-t color-4 border-y1" style="width:122px;padding:12px 51px 15px 33px;margin-left:35px;">下一篇</div>
+				<span class="font14 color-4 display-ib" style="margin-left:36px;">
+					2018携手走向未来：我们的“家”里有了新朋友和新科技
+				</span>
+			</div>
+			<div class="pos-a top0" style="left: 35px;">
+				<div class="font14 color-9">2018-01</div>
+				<div class="font-b color-9" style="font-size: 41px;">16</div>
+			</div>
+		</div>
+	</div>
+	<!-- 内容 start -->
+	<!-- 底部 start -->
+	<div class="w100-per pos-r" style="background-color: #363636;height: 110px;border-top: 16px solid #c83935;margin-top:30px;">
+		<div class="de-totop cursor-p"></div>
+		<div class="font14 color-f margin-auto" style="margin-top:35px;width:400px;height:40px;">
+			<span>版权所有：漯河慈善总会</span>
+			<span style="margin-left:30px;">技术支持：中科恒运股份有限公司</span>
+			<span class="display-b" style="margin: 5px 0 0 75px;">
+				公安备案号：豫ICP备 16005607 号 -1
+			</span>
+		</div>
+		<div class="fr pos-r" style="border:1px solid #dadbdd;width: 62px;height: 22px;right:450px;bottom:25px;">
+			<img style="background: red;" src="" al t="">
+		</div>
+		<div class="fr pos-r" style="right:465px;bottom:25px;">
+			<wb:follow-button uid="2991975565" type="red_1" width="67" height="24"></wb:follow-button>
+		</div>
+	</div>
+	<!-- 底部 end -->
+	<!-- 侧边栏 start -->
+	<div class="side">
+		<ul class="font16" style="margin-top:75px;height: 480px;">
+			<li class="first box text-c pos-r cursor-p" style="height: 110px;">
+				<div class="chatbox">
+					<div class="chat">
+						<img src="http://webatt.luohecishan.com/%E6%85%88%E5%96%84%E6%80%BB%E4%BC%9A%E5%AE%98%E7%BD%91%E4%BA%8C%E7%BB%B4%E7%A0%8120181018175439.png"
+						 alt="" style="width: 100%;">
+						<i class="display-b color-3 font16" style="line-height: 16px;font-style: normal;">关注官方微信</i>
+					</div>
+				</div>
+			</li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="second box pos-r cursor-p" style="height: 104px;padding-top: 70px;">
+				<div class="donatebox">
+					<div class="donate">
+						<div class="donate-title">捐赠方式</div>
+						<div class="donate-word">
+							<span class="cn">
+								<span class="color-theme font-b">开户名称：</span>
+								<span class="color-6">漯河慈善总会</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">开户账号：</span>
+								<span class="color-6">40001359935016</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">开户银行：</span>
+								<span class="color-6">中原银行漯河黄山路支行</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">在线捐赠：</span>
+								<span class="color-6">漯河市慈善总会</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">邮局汇款：</span>
+								<span class="color-6">40001359935016</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">地址：</span>
+								<span class="color-6">漯河市郾城区嵩山东支路与嫩江路交叉口工商联大厦11楼</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">邮政编码：</span>
+								<span class="color-6">462000</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">现场捐赠：</span>
+								<span class="color-6">漯河市郾城区嵩山东支路与嫩江路交叉口工商联大厦11楼1104室</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">公交路线：</span>
+								<span class="color-6">107路、100路工商联大厦站下车</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="third box text-c cursor-p" style="height: 127px;padding-top: 70px;">
+			</li>
+			<li class="need2 pos-a"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="four box text-c cursor-p" style="height: 110px;padding-top: 70px;">
+			</li>
+			<li class="need"></li>
+		</ul>
+		<!-- 去底部 -->
+		<a class="pos-a tobottom" href="#bottom"></a>
+		<!-- 回顶部 -->
+		<a class="pos-a totop" href="#top"></a>
+	</div>
+	<!-- 侧边栏 end -->
+
+	<script>
+		window._bd_share_config = { "common": { "bdSnsKey": {}, "bdText": "", "bdMini": "2", "bdPic": "", "bdStyle": "0", "bdSize": "16" }, "share": {}, "image": { "viewList": ["qzone", "douban", "tqq"], "viewText": "分享到：", "viewSize": "16" }, "selectShare": { "bdContainerClass": null, "bdSelectMiniList": ["qzone", "douban", "tqq"] } }; with (document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+	</script>
+
+</body>
+
+</html>

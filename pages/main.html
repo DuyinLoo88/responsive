@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/resize.css">
+	<link rel="stylesheet" href="../css/normal.css">
+	<title>首页</title>
+	<script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+	<style>
+		#slider {
+			width: 590px;
+			height: 370px;
+			position: relative;
+			display: inline-block;
+		}
+
+		.slider_list li {
+			position: absolute;
+			display: none;
+		}
+
+		.slider_list li:first-child {
+			display: block;
+		}
+
+		.slider_icon {
+			position: absolute;
+			z-index: 1;
+			left: 40%;
+			bottom: 20px;
+			font-size: 0;
+			padding: 4px 8px;
+			border-radius: 12px;
+			background-color: hsla(0, 0%, 100%, .3);
+		}
+
+		.slider_icon i {
+			display: inline-block;
+			width: 12px;
+			height: 12px;
+			border-radius: 50%;
+			margin: 0 5px;
+		}
+
+		.btn {
+			background: #fff;
+		}
+
+		.arrow {
+			display: none;
+			width: 30px;
+			height: 60px;
+			background-color: rgba(0, 0, 0, .2);
+			position: absolute;
+			top: 50%;
+			margin-top: -30px;
+		}
+
+		.prve {
+			left: 0;
+		}
+
+		.next {
+			right: 0;
+		}
+
+		.arrow span {
+			display: block;
+			width: 10px;
+			height: 10px;
+			border-bottom: 2px solid #fff;
+			border-left: 2px solid #fff;
+		}
+
+		.slider_left {
+			margin: 25px 0 0 10px;
+			transform: rotate(45deg);
+		}
+
+		.slider_right {
+			margin: 25px 0 0 5px;
+			transform: rotate(-135deg);
+		}
+
+		.arrow:hover {
+			background: #444;
+		}
+
+		#slider:hover .arrow {
+			display: block;
+		}
+
+		.btn_act {
+			background: #db192a;
+		}
+	</style>
+</head>
+
+
+<body>
+	<a name="top" class="pos-r display-b" style="top: -10000px;"></a>
+	<a name="bottom" class="pos-r display-b" style="bottom: -10000px;"></a>
+	<!-- 顶部 start -->
+	<div class="w100-per bg-theme" style="height: 35px;line-height: 35px;box-shadow: 0 6px 7px -5px #ddd;">
+		<div class="margin-auto" style="width: 1213px;">
+			<div class="fr pos-r">
+				<input class="search bg-f border-none radius-10 box pos-r" type="text" style="width: 148px;height:19px;padding:0 20px 0 8px;top:-2px;">
+			</div>
+			<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&amp;id=5&color=%23FFFFFF" width="260" height="30" frameborder="0"
+			 marginwidth="0" marginheight="0" scrolling="no" class="fr pos-r" style="top:5px;"></iframe>
+		</div>
+	</div>
+	<!-- 顶部 end -->
+	<!-- 导航菜单 start -->
+	<div style="height: 137px;box-shadow: 0 6px 7px -5px #ddd;">
+		<div class="margin-auto" style="width: 1200px;height: 137px;line-height: 137px;">
+			<img src="../images/logo.jpg" alt="" class="pos-r" style="top:-36px;left:33px;">
+			<ul class="menu">
+				<li class="fl">
+					<a href="#">首页</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善资讯</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">慈善新闻</a>
+						</li>
+						<li>
+							<a href="#">工作动态</a>
+						</li>
+						<li>
+							<a href="#">区县动态</a>
+						</li>
+						<li>
+							<a href="#">信息公示</a>
+						</li>
+						<li>
+							<a href="#">政策法规</a>
+						</li>
+						<li>
+							<a href="#">规章制度</a>
+						</li>
+						<li>
+							<a href="#">视频新闻</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善捐赠</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">冠名基金</a>
+						</li>
+						<li>
+							<a href="#">慈善项目</a>
+						</li>
+						<li>
+							<a href="#">专项基金</a>
+						</li>
+						<li>
+							<a href="#">物资捐赠</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善救助</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">扶贫济困</a>
+						</li>
+						<li>
+							<a href="#">社会福利</a>
+						</li>
+						<li>
+							<a href="#">赈灾救助</a>
+						</li>
+						<li>
+							<a href="#">公益捐赠</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">志愿服务</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">团队动态</a>
+						</li>
+						<li>
+							<a href="#">义工风采</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善文化</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">政策法规</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">关于我们</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">总会简介</a>
+						</li>
+						<li>
+							<a href="#">组织架构</a>
+						</li>
+						<li>
+							<a href="#" style="padding: 9px 5px;">理事会成员</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 导航菜单 end -->
+	<!-- 内容 start -->
+	<div class="margin-auto" style="width: 1213px;">
+		<!-- 慈善资讯 start -->
+		<div class="w100-per box pos-r" style="height: 460px;padding-left:20px;margin-top:35px;">
+			<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+			<div>
+				<div>
+					<div style="height:40px;line-height: 40px;">
+						<span class="font28 color-3 display-ib fl border-b-y1" style="width: 710px;font-family: 黑体;">慈善资讯</span>
+						<ul class="tab_menu font20 color-3 display-ib fl">
+							<li class="text-c fl cursor-p border-b-y1 border-fix" style="width: 110px;">慈善新闻</li>
+							<li class="text-c fl border-b-y1" style="width: 110px;">工作动态</li>
+							<li class="text-c fl cursor-p border-b-y1" style="width: 110px;">区县动态</li>
+						</ul>
+						<span class="display-ib fl border-b-y1" style="width: 140px;height: 40px;"></span>
+						<a href="#" class="display-b font16 pos-a" style="right:0;margin-right:22px;">更多
+							<span class="color-3">>></span>
+						</a>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Charitable news</div>
+				</div>
+				<div class="tab_box">
+					<div style="height: 370px;margin-top:29px;">
+						<div id="slider">
+							<ul class="slider_list">
+								<li>
+									<a href="#">
+										<img src="../images/temp1.png">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../images/temp1.png">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../images/temp1.png">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../images/temp1.png">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../images/temp1.png">
+									</a>
+								</li>
+							</ul>
+							<div class="slider_icon">
+								<i class="btn btn_act"></i>
+								<i class="btn"></i>
+								<i class="btn"></i>
+								<i class="btn"></i>
+								<i class="btn"></i>
+							</div>
+							<a href="javascript:;" class="arrow prve">
+								<span class="slider_left"></span>
+							</a>
+							<a href="javascript:;" class="arrow next">
+								<span class="slider_right"></span>
+							</a>
+						</div>
+						<!-- <div class="text-c display-ib vertical-a-t" style="width: 590px;height: 370px;line-height: 370px;">
+							<img src="" alt="" style="width: auto;height:auto;max-width:100%;max-height: 100%;">
+						</div> -->
+						<div class="display-ib" style="width: 565px;height: 370px;margin-left:20px;">
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">1</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">2</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">3</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">4</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">5</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">6</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">7</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl">[资讯</span>
+								<span class="fl" style="margin: 0 2px;">8</span>
+								<span class="fl">]</span>
+								<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+								<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+							</a>
+						</div>
+					</div>
+					<div class="display-n" style="height: 370px;height:200px;margin-top:29px;">工作动态</div>
+					<div class="display-n" style="height: 370px;height:200px;margin-top:29px;">区县动态</div>
+				</div>
+			</div>
+		</div>
+		<!-- 慈善资讯 end -->
+		<!-- 信息公示 视频新闻 start -->
+		<div class="w100-per box pos-r" style="height: 410px;padding-left:20px;margin-top:35px;">
+			<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+			<!-- 左侧 start -->
+			<div class="display-ib vertical-a-t" style="width: 590px;height:410px;">
+				<div>
+					<div class="border-b-y1" style="height:40px;line-height: 40px;">
+						<span class="font28 color-3" style="font-family: 黑体;">信息公示</span>
+						<a href="#" class="font16 fr" style="margin-right:11px;">更多
+							<span class="color-3">>></span>
+						</a>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Information disclosure</div>
+				</div>
+				<div style="width:572px;height: 328px;margin:0 auto;margin-top:20px;">
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">1</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">2</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">3</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">4</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">5</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">6</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+					<a href="#" class="display-b font16 a_main" style="height:45px;line-height:45px;border-bottom:1px dotted #d7d7d7;">
+						<span class="fl">[资讯</span>
+						<span class="fl" style="margin: 0 2px;">7</span>
+						<span class="fl">]</span>
+						<span class="fl overflow-h" style="width:360px;margin-left:10px;">河南推进慈善组织认定 12家公开募捐资格</span>
+						<span class="fl color-9 font14 " style="margin-left:50px;">2018-11-17</span>
+					</a>
+				</div>
+			</div>
+			<!-- 左侧 end -->
+			<!-- 右侧 start -->
+			<div class="display-ib vertical-a-t box pos-r" style="width: 567px;height: 370px;margin-left:21px;padding-left:20px;">
+				<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+				<div>
+					<div class="border-b-y1" style="height:40px;line-height: 40px;">
+						<span class="font28 color-3" style="font-family: 黑体;">视频新闻</span>
+						<a href="#" class="font16 fr" style="margin-right:11px;">更多
+							<span class="color-3">>></span>
+						</a>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Video news</div>
+				</div>
+				<video src="" controls="controls" width="391" height="284" style="border-radius:5px;margin: 23px 93px 0 73px;">
+
+				</video>
+			</div>
+			<!-- 右侧 end -->
+		</div>
+		<!-- 信息公示 视频新闻 end -->
+		<!-- 慈善捐赠 慈善救助  start -->
+		<div class="w100-per box pos-r" style="height: 390px;padding-left:20px;margin-top:35px;">
+			<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+			<!-- 左侧 start -->
+			<div class="display-ib vertical-a-t" style="width: 590px;height:389px;">
+				<div>
+					<div class="border-b-y1" style="height:40px;line-height: 40px;">
+						<span class="font28 color-3" style="font-family: 黑体;">慈善捐赠</span>
+						<a href="#" class="font16 fr" style="margin-right:11px;">更多
+							<span class="color-3">>></span>
+						</a>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Charitable donations</div>
+				</div>
+				<div class="pos-r" style="margin-top:24px;">
+					<div class="display-ib vertical-a-t" style="width: 260px;height:300px;border:1px solid #dadada;margin-right:15px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp3.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:120px;background: #f5f5f5;">
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="我要捐赠" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="display-ib vertical-a-t" style="width: 260px;height:300px;border:1px solid #dadada;margin-right:15px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp3.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:120px;background: #f5f5f5;">
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="我要捐赠" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="toleft pos-a cursor-p radius-circle" style="width:35px;height:35px;left:-28px;bottom:150px;">
+					</div>
+					<div class="toright pos-a cursor-p radius-circle" style="width:35px;height:35px;right:18px;bottom:150px;">
+					</div>
+				</div>
+			</div>
+			<!-- 左侧 end -->
+			<!-- 右侧 start -->
+			<div class="display-ib vertical-a-t box pos-r" style="width: 567px;height: 389px;margin-left:21px;padding-left:20px;">
+				<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+				<div>
+					<div class="border-b-y1" style="height:40px;line-height: 40px;">
+						<span class="font28 color-3" style="font-family: 黑体;">慈善救助</span>
+						<a href="#" class="font16 fr" style="margin-right:11px;">更多
+							<span class="color-3">>></span>
+						</a>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Charity relief</div>
+				</div>
+				<div class="pos-r" style="margin-top:24px;">
+					<div class="display-ib vertical-a-t" style="width: 260px;height:300px;border:1px solid #dadada;margin-right:15px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp3.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:120px;background: #f5f5f5;">
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="我要捐赠" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="display-ib vertical-a-t" style="width: 260px;height:300px;border:1px solid #dadada;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp3.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:120px;background: #f5f5f5;">
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="我要捐赠" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="toleft pos-a cursor-p radius-circle" style="width:35px;height:35px;left:-28px;bottom:150px;">
+					</div>
+					<div class="toright pos-a cursor-p radius-circle" style="width:35px;height:35px;right:-24px;bottom:150px;">
+					</div>
+				</div>
+			</div>
+			<!-- 右侧 end -->
+		</div>
+		<!-- 慈善捐赠 慈善救助  end -->
+		<!-- 政策、讲堂 start -->
+		<div class="w100-per box" style="margin-top:35px;height: 425px;">
+			<!-- 左侧 start -->
+			<div class="display-ib vertical-a-t box pos-r" style="width: 610px;height:425px;padding-left:20px;">
+				<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+				<div>
+					<div>
+						<div style="height:40px;line-height: 40px;">
+							<ul class="tab_menu font28 color-3 display-ib fl">
+								<li class="text-c fl border-b-y1 border-fix" style="width: 172px;font-family: 黑体;">政策法规</li>
+								<li class="text-c fl cursor-p border-b-y1" style="width: 172px;font-family: 黑体;">规章制度</li>
+							</ul>
+							<span class="display-ib fl border-b-y1" style="width: 244px;height: 40px;"></span>
+							<a href="#" class="display-b font16 pos-a" style="right:0;margin-right:11px;">更多
+								<span class="color-3">>></span>
+							</a>
+						</div>
+						<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">
+							<span>Policies and regulations</span>
+							<span style="margin-left:30px;">Rules and regulations</span>
+						</div>
+					</div>
+					<div class="tab_box">
+						<div style="width:550px;height: 351px;margin-top:9px;">
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">慈善组织保值增值投资活动管理暂行办法</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">河南拟立法保护志愿服务权益</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">国务院办公厅关于同意建立农村留守儿童</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">慈善组织信息公开办法</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">民政部指定互联网募捐信息平台又添新成员</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">社会组织法律法规数据库上线</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">民政办公厅关于做好志愿服务组织身份标识工作的通知</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:410px;">民政办公厅关于做好志愿服务组织身份标识工作的通知</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+						</div>
+						<div class="display-n" style="width:590px;height: 351px;margin-top:9px;">
+							规章制度
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 左侧 end -->
+			<!-- 右侧 start -->
+			<div class="display-ib vertical-a-t box pos-r" style="width: 579px;height:425px;margin-left:19px;padding-left:20px;">
+				<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+				<div>
+					<div>
+						<div style="height:40px;line-height: 40px;">
+							<ul class="tab_menu font28 color-3 display-ib fl">
+								<li class="text-c fl border-b-y1 border-fix" style="width: 172px;font-family: 黑体;">慈善文化</li>
+								<li class="text-c fl cursor-p border-b-y1" style="width: 172px;font-family: 黑体;">慈善讲堂</li>
+							</ul>
+							<span class="display-ib fl border-b-y1" style="width: 210px;height: 40px;"></span>
+							<a href="#" class="display-b font16 pos-a" style="right:0;margin-right:11px;">更多
+								<span class="color-3">>></span>
+							</a>
+						</div>
+						<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">
+							<span style="margin-left:20px;">Charity culture</span>
+							<span style="margin-left:98px;">Lecture hall</span>
+						</div>
+					</div>
+					<div class="tab_box">
+						<div style="width:550px;height: 351px;margin-top:9px;">
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">宋代江南地区的民间慈善事业</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">中国高校学子日渐热衷公益</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">公益力量助推我国荒漠化防治</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">雷建：专注青少年司法社工工作</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">志愿服务银行：激活校园公益一池春水</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">愿“兰小草”无声的爱在这个时代回响</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">豆芽奶奶刘运英与慈善家告诉我们：没有哪种爱是水电费和第三方就看会</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+							<a href="#" class="display-b font16 a_main" style="height:43px;line-height:43px;border-bottom:1px dotted #d7d7d7;">
+								<span class="fl overflow-h" style="width:370px;">手仅能移动五厘米，她却通过画画捐赠百万</span>
+								<span class="fr color-9 font14">2018-10-20</span>
+							</a>
+						</div>
+						<div class="display-n" style="width:550px;height: 351px;margin-top:9px;">慈善讲堂</div>
+					</div>
+				</div>
+			</div>
+			<!-- 右侧 end -->
+		</div>
+		<!-- 政策、讲堂 end -->
+		<!-- 志愿服务 start -->
+		<div class="w100-per box pos-r" style="height: 440px;padding-left:20px;margin-top:35px;">
+			<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+			<div>
+				<div>
+					<div class="border-b-y1" style="height:40px;line-height: 40px;">
+						<span class="font28 color-3" style="font-family: 黑体;">志愿服务</span>
+						<a href="#" class="font16 fr" style="margin-right:22px;">更多
+							<span class="color-3">>></span>
+						</a>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Volunteer service</div>
+				</div>
+				<div class="pos-r" style="margin-top:24px;">
+					<div class="display-ib vertical-a-t" style="width: 260px;height:330px;border:1px solid #dadada;margin-right:32px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp4.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:150px;background: #f5f5f5;">
+							<div class="font20" style="color:#393939;padding-top:17px;">
+								关爱特困群体
+							</div>
+							<div class="pos-r margin-auto" style="width:158px;border-bottom: 1px solid #d1d1d1;margin-top:15px;">
+								<div class="text-c pos-a" style="width: 10px;height:10px;line-height:10px;background: #d6d6d6;color: #a3a3a3;left:69px;top:-5px;">+</div>
+							</div>
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="查看详情" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="display-ib vertical-a-t" style="width: 260px;height:330px;border:1px solid #dadada;margin-right:32px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp4.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:150px;background: #f5f5f5;">
+							<div class="font20" style="color:#393939;padding-top:17px;">
+								关爱救助孤寡老人
+							</div>
+							<div class="pos-r margin-auto" style="width:158px;border-bottom: 1px solid #d1d1d1;margin-top:15px;">
+								<div class="text-c pos-a" style="width: 10px;height:10px;line-height:10px;background: #d6d6d6;color: #a3a3a3;left:69px;top:-5px;">+</div>
+							</div>
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="查看详情" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="display-ib vertical-a-t" style="width: 260px;height:330px;border:1px solid #dadada;margin-right:32px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp4.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:150px;background: #f5f5f5;">
+							<div class="font20" style="color:#393939;padding-top:17px;">
+								让生活更美好，关注环保
+							</div>
+							<div class="pos-r margin-auto" style="width:158px;border-bottom: 1px solid #d1d1d1;margin-top:15px;">
+								<div class="text-c pos-a" style="width: 10px;height:10px;line-height:10px;background: #d6d6d6;color: #a3a3a3;left:69px;top:-5px;">+</div>
+							</div>
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="查看详情" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="display-ib vertical-a-t" style="width: 260px;height:330px;border:1px solid #dadada;margin-right:32px;">
+						<div class="text-c" style="width: 260px;height:180px;line-height: 180px;">
+							<img src="../images/temp4.png" alt="" style="width: auto;height: auto;max-width: 100%;max-height:180px;">
+						</div>
+						<div class="text-c" style="width: 260px;height:150px;background: #f5f5f5;">
+							<div class="font20" style="color:#393939;padding-top:17px;">
+								大学生义工联合
+							</div>
+							<div class="pos-r margin-auto" style="width:158px;border-bottom: 1px solid #d1d1d1;margin-top:15px;">
+								<div class="text-c pos-a" style="width: 10px;height:10px;line-height:10px;background: #d6d6d6;color: #a3a3a3;left:69px;top:-5px;">+</div>
+							</div>
+							<div class="font14 margin-auto overflow-h2 text-l" style="width:215px;height:40px;color:#393939;word-break: break-all;padding-top:22px;">
+								2018年9月15日上午，***学校领导和老师组织一批...
+							</div>
+							<input type="button" value="查看详情" class="bg-theme color-f font14 border-none cursor-p" style="width: 200px;height:30px;margin-top:15px;">
+						</div>
+					</div>
+					<div class="tobigleft pos-a cursor-p" style="width:40px;height:40px;left:-43px;bottom:180px;"></div>
+					<div class="tobigright pos-a cursor-p" style="width:40px;height:40px;right:-29px;bottom:180px;"></div>
+				</div>
+			</div>
+		</div>
+		<!-- 志愿服务 end -->
+		<!-- 友情链接 start -->
+		<div class="w100-per box pos-r" style="height: 155px;padding-left:20px;margin-top:35px;">
+			<div class="pos-a bg-y pos-a top0 left0" style="width: 4px;height: 59px;"></div>
+			<div>
+				<div>
+					<div style="height:40px;line-height: 40px;">
+						<span class="font28 color-3 display-ib fl border-b-y1" style="width: 671px;font-family: 黑体;">友情链接</span>
+						<ul class="tab_menu font20 color-3 display-ib fl">
+							<li class="text-c fl cursor-p border-b-y1" style="width: 130px;">专题活动</li>
+							<li class="text-c fl border-b-y1" style="width: 130px;">合作伙伴</li>
+							<li class="text-c fl cursor-p border-b-y1 border-fix" style="width: 130px;">慈善会机构</li>
+							<li class="text-c fl border-b-y1" style="width: 130px;">政府机构</li>
+						</ul>
+					</div>
+					<div class="font14" style="margin-top:5px;color: #777777;font-style: italic;">Links</div>
+				</div>
+				<div class="tab_box">
+					<div class="display-n w100-per" style="margin-top: 24px;">专题活动</div>
+					<div class="display-n w100-per" style="margin-top: 24px;">合作伙伴</div>
+					<div class="w100-per" style="margin-top: 24px;">
+						<a href="#" class="display-ib vertical-a-t fl" style="margin-right:10px;">
+							<img src="../images/temp5.png" alt="" style="height: 64px;border: 1px solid #f4f4f4;">
+						</a>
+						<a href="#" class="display-ib vertical-a-t fl" style="margin-right:10px;">
+							<img src="../images/temp5.png" alt="" style="height: 64px;border: 1px solid #f4f4f4;">
+						</a>
+						<a href="#" class="display-ib vertical-a-t fl" style="margin-right:10px;">
+							<img src="../images/temp5.png" alt="" style="height: 64px;border: 1px solid #f4f4f4;">
+						</a>
+						<a href="#" class="display-ib vertical-a-t fl" style="margin-right:10px;">
+							<img src="../images/temp5.png" alt="" style="height: 64px;border: 1px solid #f4f4f4;">
+						</a>
+						<a href="#" class="display-ib vertical-a-t fl" style="margin-right:10px;">
+							<img src="../images/temp5.png" alt="" style="height: 64px;border: 1px solid #f4f4f4;">
+						</a>
+					</div>
+					<div class="display-n w100-per" style="margin-top: 24px;">政府机构</div>
+				</div>
+			</div>
+		</div>
+		<!-- 友情链接 end -->
+	</div>
+	<!-- 内容 start -->
+	<!-- 底部 start -->
+	<div class="w100-per" style="background: #363636;height: 110px;border-top: 16px solid #c83935;margin-top:30px;">
+		<div class="font14 color-f margin-auto" style="margin-top:35px;width:400px;height:40px;">
+			<span>版权所有：漯河慈善总会</span>
+			<span style="margin-left:30px;">技术支持：中科恒运股份有限公司</span>
+			<span class="display-b" style="margin: 5px 0 0 75px;">
+				公安备案号：豫ICP备 16005607 号 -1
+			</span>
+		</div>
+		<div class="fr pos-r" style="border:1px solid #dadbdd;width: 62px;height: 22px;right:450px;bottom:25px;">
+			<img style="background: red;" src="" al t="">
+		</div>
+		<div class="fr pos-r" style="right:465px;bottom:25px;">
+			<wb:follow-button uid="2991975565" type="red_1" width="67" height="24"></wb:follow-button>
+		</div>
+	</div>
+	<!-- 底部 end -->
+	<!-- 侧边栏 start -->
+	<div class="side">
+		<ul class="font16" style="margin-top:75px;height: 480px;">
+			<li class="first box text-c pos-r cursor-p" style="height: 110px;">
+				<div class="chatbox">
+					<div class="chat">
+						<img src="http://webatt.luohecishan.com/%E6%85%88%E5%96%84%E6%80%BB%E4%BC%9A%E5%AE%98%E7%BD%91%E4%BA%8C%E7%BB%B4%E7%A0%8120181018175439.png"
+						 alt="" style="width: 100%;">
+						<i class="display-b color-3 font16" style="line-height: 16px;font-style: normal;">关注官方微信</i>
+					</div>
+				</div>
+			</li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="second box pos-r cursor-p" style="height: 104px;padding-top: 70px;">
+				<div class="donatebox">
+					<div class="donate">
+						<div class="donate-title">捐赠方式</div>
+						<div class="donate-word">
+							<span class="cn">
+								<span class="color-theme font-b">开户名称：</span>
+								<span class="color-6">漯河慈善总会</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">开户账号：</span>
+								<span class="color-6">40001359935016</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">开户银行：</span>
+								<span class="color-6">中原银行漯河黄山路支行</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">在线捐赠：</span>
+								<span class="color-6">漯河市慈善总会</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">邮局汇款：</span>
+								<span class="color-6">40001359935016</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">地址：</span>
+								<span class="color-6">漯河市郾城区嵩山东支路与嫩江路交叉口工商联大厦11楼</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">邮政编码：</span>
+								<span class="color-6">462000</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">现场捐赠：</span>
+								<span class="color-6">漯河市郾城区嵩山东支路与嫩江路交叉口工商联大厦11楼1104室</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">公交路线：</span>
+								<span class="color-6">107路、100路工商联大厦站下车</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="third box text-c cursor-p" style="height: 127px;padding-top: 70px;">
+			</li>
+			<li class="need2 pos-a"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="four box text-c cursor-p" style="height: 110px;padding-top: 70px;">
+			</li>
+			<li class="need"></li>
+		</ul>
+		<!-- 去底部 -->
+		<a class="pos-a tobottom" href="#bottom"></a>
+		<!-- 回顶部 -->
+		<a class="pos-a totop" href="#top"></a>
+	</div>
+	<!-- 侧边栏 end -->
+
+
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script>
+		$(function () {
+			var $div_li = $("ul.tab_menu li");
+			$div_li.click(function () {
+				$(this).addClass("border-fix")
+					.siblings().removeClass("border-fix");
+				var index = $div_li.index(this);
+				$("div.tab_box > div")
+					.eq(index).show()
+					.siblings().hide();
+			})
+		});
+
+		$(function () {
+			var count = 0;
+			var $li = $("#slider>ul>li");
+			$(".next").click(function () {
+				count++;
+				if (count == $li.length) {
+					count = 0;
+				}
+				$li.eq(count).fadeIn().siblings().fadeOut();
+				$(".slider_icon i").eq(count).addClass("btn_act").siblings().removeClass('btn_act');
+				console.log(count);
+			});
+			$(".prve").click(function () {
+				count--;
+				if (count == -1) {
+					count = $li.length - 1;
+				}
+				console.log(count);
+				$li.eq(count).fadeIn().siblings().fadeOut();
+				$(".slider_icon i").eq(count).addClass("btn_act").siblings().removeClass('btn_act');
+			});
+			$(".slider_icon i").mouseenter(function () {
+				$(this).addClass('btn_act').siblings().removeClass("btn_act");
+				$li.eq($(this).index()).fadeIn().siblings().fadeOut();
+				count = $(this).index();
+			});
+		});
+
+	</script>
+
+</body>
+
+</html>

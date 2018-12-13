@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:wb="http://open.weibo.com/wb">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/resize.css">
+	<link rel="stylesheet" href="../css/normal.css">
+	<title>列表</title>
+	<script src="https://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>
+	<a name="top" class="pos-r display-b" style="top: -10000px;"></a>
+	<a name="bottom" class="pos-r display-b" style="bottom: -10000px;"></a>
+	<!-- 顶部 start -->
+	<div class="w100-per bg-theme" style="height: 35px;line-height: 35px;box-shadow: 0 6px 7px -5px #ddd;">
+		<div class="margin-auto" style="width: 1213px;">
+			<div class="fr pos-r">
+				<input class="search bg-f border-none radius-10 box pos-r" type="text" style="width: 148px;height:19px;padding:0 20px 0 8px;top:-2px;">
+			</div>
+			<iframe name="weather_inc" src="http://i.tianqi.com/index.php?c=code&amp;id=5&color=%23FFFFFF" width="260" height="30" frameborder="0"
+			 marginwidth="0" marginheight="0" scrolling="no" class="fr pos-r" style="top:5px;"></iframe>
+		</div>
+	</div>
+	<!-- 顶部 end -->
+	<!-- 导航菜单 start -->
+	<div style="height: 137px;box-shadow: 0 6px 7px -5px #ddd;">
+		<div class="margin-auto" style="width: 1200px;height: 137px;line-height: 137px;">
+			<img src="../images/logo.jpg" alt="" class="pos-r" style="top:-36px;left:33px;">
+			<ul class="menu">
+				<li class="fl">
+					<a href="#">首页</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善资讯</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">慈善新闻</a>
+						</li>
+						<li>
+							<a href="#">工作动态</a>
+						</li>
+						<li>
+							<a href="#">区县动态</a>
+						</li>
+						<li>
+							<a href="#">信息公示</a>
+						</li>
+						<li>
+							<a href="#">政策法规</a>
+						</li>
+						<li>
+							<a href="#">规章制度</a>
+						</li>
+						<li>
+							<a href="#">视频新闻</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善捐赠</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">冠名基金</a>
+						</li>
+						<li>
+							<a href="#">慈善项目</a>
+						</li>
+						<li>
+							<a href="#">专项基金</a>
+						</li>
+						<li>
+							<a href="#">物资捐赠</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善救助</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">扶贫济困</a>
+						</li>
+						<li>
+							<a href="#">社会福利</a>
+						</li>
+						<li>
+							<a href="#">赈灾救助</a>
+						</li>
+						<li>
+							<a href="#">公益捐赠</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">志愿服务</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">团队动态</a>
+						</li>
+						<li>
+							<a href="#">义工风采</a>
+						</li>
+					</ul>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">慈善文化</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">政策法规</a>
+				</li>
+				<li class="fl">
+					<span class="devide"></span>
+				</li>
+				<li class="fl">
+					<a href="#">关于我们</a>
+					<div class="triangle"></div>
+					<ul class="submenu color-f" style="height: 280px;">
+						<li>
+							<a href="#">总会简介</a>
+						</li>
+						<li>
+							<a href="#">组织架构</a>
+						</li>
+						<li>
+							<a href="#" style="padding: 9px 5px;">理事会成员</a>
+						</li>
+						<li>
+							<a href="#">联系我们</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 导航菜单 end -->
+	<!-- 内容 start -->
+	<div class="margin-auto" style="width: 1200px;height:1147px;margin-top: 30px;">
+		<div class="fl box" style="width: 280px;height: 971px;border: 1px solid #dcdcdc;background: #fafafa;margin-right:30px;">
+			<div class="news bg-theme color-f font20 w100-per box" style="height:54px;line-height:54px;">
+				<span style="margin-left:51px;">慈善资讯</span>
+			</div>
+			<ul class="tab_menu box list" style="width: 242px;margin-left:24px;">
+				<li class="box w100-per font18 color-list" style="border-bottom:1px dotted #dcdcdc; padding-left:25px;height: 50px;line-height: 50px;">
+					<a href="#">
+						<span class="display-ib bg-theme" style="height:14px;width:2px;margin-right:18px;"></span>
+						慈善新闻</a>
+				</li>
+				<li class="box w100-per font18" style="border-bottom:1px dotted #dcdcdc; padding-left:25px;height: 50px;line-height: 50px;">
+					<a href="#">
+						<span class="display-ib bg-theme" style="height:14px;width:2px;margin-right:18px;"></span>
+						工作动态</a>
+				</li>
+				<li class="box w100-per font18" style="border-bottom:1px dotted #dcdcdc; padding-left:25px;height: 50px;line-height: 50px;">
+					<a href="#">
+						<span class="display-ib bg-theme" style="height:14px;width:2px;margin-right:18px;"></span>
+						区县动态</a>
+				</li>
+				<li class="box w100-per font18" style="border-bottom:1px dotted #dcdcdc; padding-left:25px;height: 50px;line-height: 50px;">
+					<a href="#">
+						<span class="display-ib bg-theme" style="height:14px;width:2px;margin-right:18px;"></span>
+						信息公示</a>
+				</li>
+				<li class="box w100-per font18" style="border-bottom:1px dotted #dcdcdc; padding-left:25px;height: 50px;line-height: 50px;">
+					<a href="#">
+						<span class="display-ib bg-theme" style="height:14px;width:2px;margin-right:18px;"></span>
+						视频新闻</a>
+				</li>
+			</ul>
+		</div>
+		<div class="tab_box">
+			<div class="fl box" style="width: 890px;height: 971px;border: 1px solid #dedede;">
+				<div style="width: 809px;height: 919px;margin: 23px 41px 29px 40px;">
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+					<a class="display-b font18 overflow-h pos-r list2" href="" style="margin-bottom:26px;width:809px;">
+						<span class="fl bg-theme pos-a" style="width:5px;height:5px;top:10px;"></span>
+						<span class="fl overflow-h" style="width:588px;margin-left: 25px;">邓永俭会见新疆残疾人福利基金会会长贾帕尔阿比布拉一行</span>
+						<span class="fl font16" style="margin-left:107px;">
+							2018-12-03
+						</span>
+					</a>
+				</div>
+			</div>
+			<div class="fl box display-n" style="width: 890px;height: 971px;border: 1px solid #dedede;">工作动态</div>
+			<div class="fl box display-n" style="width: 890px;height: 971px;border: 1px solid #dedede;">区县动态</div>
+			<div class="fl box display-n" style="width: 890px;height: 971px;border: 1px solid #dedede;">信息公示</div>
+			<div class="fl box display-n" style="width: 890px;height: 971px;border: 1px solid #dedede;">视频新闻</div>
+		</div>
+		<div class="margin-auto pos-r" style="top:58px;width: 326px;height: 25px;;">
+			<a href="#" class="page">
+				<</a>
+					<a href="#" class="page">1</a>
+					<a href="#" class="page pagefix">2</a>
+					<a href="#" class="page">></a>
+		</div>
+	</div>
+	<!-- 内容 start -->
+	<!-- 底部 start -->
+	<div class="w100-per" style="background: #363636;height: 110px;border-top: 16px solid #c83935;margin-top:30px;">
+		<div class="font14 color-f margin-auto" style="margin-top:35px;width:400px;height:40px;">
+			<span>版权所有：漯河慈善总会</span>
+			<span style="margin-left:30px;">技术支持：中科恒运股份有限公司</span>
+			<span class="display-b" style="margin: 5px 0 0 75px;">
+				公安备案号：豫ICP备 16005607 号 -1
+			</span>
+		</div>
+		<div class="fr pos-r" style="border:1px solid #dadbdd;width: 62px;height: 22px;right:450px;bottom:25px;">
+			<img style="background: red;" src="" al t="">
+		</div>
+		<div class="fr pos-r" style="right:465px;bottom:25px;">
+			<wb:follow-button uid="2991975565" type="red_1" width="67" height="24"></wb:follow-button>
+		</div>
+	</div>
+	<!-- 底部 end -->
+	<!-- 侧边栏 start -->
+	<div class="side">
+		<ul class="font16" style="margin-top:75px;height: 480px;">
+			<li class="first box text-c pos-r cursor-p" style="height: 110px;">
+				<div class="chatbox">
+					<div class="chat">
+						<img src="http://webatt.luohecishan.com/%E6%85%88%E5%96%84%E6%80%BB%E4%BC%9A%E5%AE%98%E7%BD%91%E4%BA%8C%E7%BB%B4%E7%A0%8120181018175439.png"
+						 alt="" style="width: 100%;">
+						<i class="display-b color-3 font16" style="line-height: 16px;font-style: normal;">关注官方微信</i>
+					</div>
+				</div>
+			</li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="second box pos-r cursor-p" style="height: 104px;padding-top: 70px;">
+				<div class="donatebox">
+					<div class="donate">
+						<div class="donate-title">捐赠方式</div>
+						<div class="donate-word">
+							<span class="cn">
+								<span class="color-theme font-b">开户名称：</span>
+								<span class="color-6">漯河慈善总会</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">开户账号：</span>
+								<span class="color-6">40001359935016</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">开户银行：</span>
+								<span class="color-6">中原银行漯河黄山路支行</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">在线捐赠：</span>
+								<span class="color-6">漯河市慈善总会</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">邮局汇款：</span>
+								<span class="color-6">40001359935016</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">地址：</span>
+								<span class="color-6">漯河市郾城区嵩山东支路与嫩江路交叉口工商联大厦11楼</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">邮政编码：</span>
+								<span class="color-6">462000</span>
+							</span>
+							<span class="cn">
+								<span class="color-theme font-b">现场捐赠：</span>
+								<span class="color-6">漯河市郾城区嵩山东支路与嫩江路交叉口工商联大厦11楼1104室</span>
+							</span>
+							<span class="cn">
+								<span class="color-6">公交路线：</span>
+								<span class="color-6">107路、100路工商联大厦站下车</span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="third box text-c cursor-p" style="height: 127px;padding-top: 70px;">
+			</li>
+			<li class="need2 pos-a"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-bottom: 1px solid #ff3834;"></li>
+			<li style="height: 1px;width:120px;margin:0 13px;border-top: 1px solid #b90a07;"></li>
+			<li class="four box text-c cursor-p" style="height: 110px;padding-top: 70px;">
+			</li>
+			<li class="need"></li>
+		</ul>
+		<!-- 去底部 -->
+		<a class="pos-a tobottom" href="#bottom"></a>
+		<!-- 回顶部 -->
+		<a class="pos-a totop" href="#top"></a>
+	</div>
+	<!-- 侧边栏 end -->
+	
+
+	<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+	<script>
+		$(function () {
+			var $div_li = $("ul.tab_menu li");
+			$div_li.click(function () {
+				$(this).addClass("color-list")
+					.siblings().removeClass("color-list");
+				var index = $div_li.index(this);
+				$("div.tab_box > div")
+					.eq(index).show()
+					.siblings().hide();
+			})
+		});
+	</script>
+
+
+</body>
+
+</html>
