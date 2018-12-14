@@ -366,22 +366,22 @@ div.news {
 	background-repeat: no-repeat;
 	background-position: 19px -33px;
 }
-div.toleft {
+a.toleft {
 	background-image: url("../images/icon2.png");
 	background-repeat: no-repeat;
 	background-position: 0 0;
 }
-div.toright {
+a.toright {
 	background-image: url("../images/icon2.png");
 	background-repeat: no-repeat;
 	background-position: -1px -49px;
 }
-div.tobigleft {
+a.tobigleft {
 	background-image: url("../images/icon2.png");
 	background-repeat: no-repeat;
 	background-position: 0 -100px;
 }
-div.tobigright {
+a.tobigright {
 	background-image: url("../images/icon2.png");
 	background-repeat: no-repeat;
 	background-position: -1px -150px;
